@@ -33,12 +33,9 @@ class Fight:
 
     def fight(self):
         while self.figher1.is_alive() and self.figher2.is_alive():
-                                                                     # the fighter1 attacked fighter2
             self.figher2.set_health(self.figher2.get_health() - self.figher1.get_damagePerAttack())
             if not self.figher2.is_alive():
                 return self.figher1.get_name()
-
-                                                                     # the fighter2 attacked fighter1
             self.figher1.set_health(self.figher1.get_health() - self.figher2.get_damagePerAttack())
             if not self.figher1.is_alive():
                 return self.figher2.get_name()
